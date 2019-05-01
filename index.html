@@ -2,8 +2,73 @@
 <html lang="en">
     <head>
         <title>Let's see if Jeff is being a bitch</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+            body {
+                background-color: #f7f7f7;
+                text-align: center;
+                padding: 10px;
+            }
+            h1, p {
+                color: #5e5e5e;
+            }
+            p {
+                font-size: 17px;
+                line-height: 25px;
+            }
+            button {
+                background-color: #161616;
+                color: #FFF;
+                border-radius: 3px;
+                border-style: none;
+                padding: 10px;
+                font-size: 20px;
+            }
+            button:hover {
+                cursor: pointer;
+                opacity: 0.6;
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello</h1>
+        <h1>Jeff Bitch Analyzer</h1>
+        <p>This very scientific technology is used to ping a signal off of the nearest Jeff-Bitch sattelite to detect his current bitch levels and display them back here.</p>
+        <p>Simply click or tap the button to see Jeff's current bitch levels:</p>
+        <button onclick="analyzeJeff()">Analyze</button>
+        <p id="result"></p>
+        <p id="comment"></p>
+        <script>
+            var jeffLevel = Math.floor(Math.random() * 10) + 1;
+
+            function analyzeJeff() {
+                document.getElementById("result").innerHTML = "Jeff's bitch level: " + jeffLevel;
+
+                if (jeffLevel == 1) {
+                    document.getElementById("comment").innerHTML = "This is the minimum jeff-bitch-level. Perhaps it is YOU who are the bitch";
+                } else if (jeffLevel == 2) {
+                    document.getElementById("comment").innerHTML = "Quite a low bitch level";
+                } else if (jeffLevel == 3) {
+                    document.getElementById("comment").innerHTML = "Jeff's bitch levels are lower than average right now.";
+                } else if (jeffLevel == 4) {
+                    document.getElementById("comment").innerHTML = "Jeff's bitch level is JUST below his average.";
+                } else if (jeffLevel == 5) {
+                    document.getElementById("comment").innerHTML = "Jeff's bitch level is on average. He could be more of a bitch right now, but he could also be less of one.";
+                } else if (jeffLevel == 6) {
+                    document.getElementById("comment").innerHTML = "Jeff's bitch level is a tad bit above normal. This is where he is generally at while playing league.";
+                } else if (jeffLevel == 7) {
+                    document.getElementById("comment").innerHTML = "Jeff's bitch level is somewhat high, I can only assume he is arguing about something right now, and probably is not correct.";
+                } else if (jeffLevel == 8) {
+                    document.getElementById("comment").innerHTML = 'At this time Jeff is passing the bitch threshold, and one would undoubtably say that he is "definitively being a bitch".';
+                } else if (jeffLevel == 9) {
+                    document.getElementById("comment").innerHTML = 'The only way Jeff could be more of a bitch right now is if he said something idiotic like, "Reesees Peesees", or "Ironman is not a super hero".';
+                } else if (jeffLevel == 10) {
+                    document.getElementById("comment").innerHTML = "Jeff is being as much of a bitch as he can possibly be right now. Stop being a bitch Jeff, you're ruining everyone's good time.";
+                }
+
+            }
+        </script>
     </body>
 </html>
